@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>leaflet-map-simple</title>
+  <title>nickc-map-simple</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="utf-8">
 
@@ -28,22 +28,30 @@
   /* Set up the initial map center and zoom level */
   var map = L.map('map', {
     center: [41.748087418225346, -72.69427732388866], // EDIT coordinates to re-center map
-    zoom: 15,  // EDIT from 1 (zoomed out) to 18 (zoomed in)
+    zoom: 3,  // EDIT from 1 (zoomed out) to 18 (zoomed in)
     scrollWheelZoom: false
   });
 
   /* display basemap tiles -- see others at https://leaflet-extras.github.io/leaflet-providers/preview/ */
   L.tileLayer(
-    'https://tile.osm.ch/switzerland/{z}/{x}/{y}.png', {
+    'https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '&copy; <a href="https://osm.org/copyright">\
         OpenStreetMap</a> contributors, &copy;\
         <a href="https://carto.com/attribution">CARTO</a>'
   }).addTo(map);
 
   /* Display a point marker with pop-up text */
-  L.marker([41.748061743773654, -72.694245912024889]).addTo(map) // EDIT marker coordinates
-  .bindPopup("American Mexican Diner"); // EDIT pop-up text message
+  L.marker([41.7477, 72.6905]).addTo(map) // EDIT marker coordinates
+  .bindPopup("Trinity College"); // EDIT pop-up text message
 
+      /* Display a point marker with pop-up text */
+  L.marker([41.5568, 72.6568]).addTo(map) // EDIT marker coordinates
+  .bindPopup("Wesleyan University"); // EDIT pop-up text message
+
+      /* Display a point marker with pop-up text */
+  L.marker([41.3798, 72.1043]).addTo(map) // EDIT marker coordinates
+  .bindPopup("Connecticut College"); // EDIT pop-up text message
+    
   </script>
 </body>
 </html>
